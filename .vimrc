@@ -34,7 +34,7 @@ filetype plugin indent on
 " TODO: Pick a leader key
 " let mapleader = ","
 
-
+" adding keyboard shortcut for copy and paste with system clipboard
 vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
