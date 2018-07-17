@@ -34,6 +34,12 @@ filetype plugin indent on
 " TODO: Pick a leader key
 " let mapleader = ","
 
+
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <C-r><C-o>+
+
 " Security
 set modelines=0
 
