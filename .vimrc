@@ -34,7 +34,7 @@ filetype plugin indent on
 " TODO: Pick a leader key
 " let mapleader = ","
 
-" adding keyboard shortcut for copy and paste with system clipboard
+
 vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
@@ -57,7 +57,7 @@ set encoding=utf-8
 
 " Whitespace
 set wrap
-set textwidth=79
+"set textwidth=80
 set formatoptions=tcqrn1
 set tabstop=2
 set shiftwidth=2
@@ -124,3 +124,10 @@ colorscheme afterglow
 " put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
 " in ~/.vim/colors/ and uncomment:
 " colorscheme solarized
+
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+

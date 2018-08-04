@@ -15,6 +15,16 @@ aurin(){
     rm -rf aur_packages # Uncomment if you want to clean up after install
 }
 
+aurin(){
+	wget "https://aur.archlinux.org/cgit/aur.git/snapshot/${1}.tar.gz" -O - | tar xz -C /tmp
+	cwd = $(pwd)
+	cd /tmp/${1}/
+	makepkg -Acsi
+	#pacman -U --noconfirm /tmp/${1}/*.pkg.tar.xz
+	cd $cwd
+}
+
+
 alias play='DRI_PRIME=1 mplayer'
 alias st='/home/partha/Programs/sublime_text_3/sublime_text'
 alias pycharm='/home/partha/Programs/pycharm-community-2018.1.4/bin/pycharm.sh'
