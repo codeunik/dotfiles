@@ -34,9 +34,9 @@ aurin(){
 mmd(){
   echo --- >> "$1"
   echo title: $2 >> "$1"
-  echo geometry: "left=1cm,right=1cm,top=1cm,bottom=1.5cm" >> "$1"
-  echo fontsize: 10pt >> "$1"
-  echo papersize: a5 >> "$1"
+  echo geometry: "left=1cm,right=1cm,top=1cm,bottom=1cm" >> "$1"
+  echo fontsize: 11pt >> "$1"
+  echo papersize: a4 >> "$1"
   echo header-includes: >> "$1"
   echo "  \usepackage{listings,xcolor,graphicx,wrapfig}
   \usepackage{float}\let\origfigure\figure\let\endorigfigure\endfigure\renewenvironment{figure}[1][2] {\expandafter\origfigure\expandafter[H]} {\endorigfigure}
@@ -53,7 +53,7 @@ mdhtml(){
   pandoc "$1.md" -f markdown -t html -s --mathjax -o "$1.html" && mkdir -p htmls &&mv "$1.html" ./htmls/
 }
 mdpdf(){
-  pandoc -f markdown -t latex -o "$1.pdf" "$1.md" && mkdir -p pdfs && mv "$1.pdf" ./pdfs/
+  pandoc -f markdown -t latex -o "$1.pdf" "$1.md" --pdf-engine=xelatex && mkdir -p pdfs && mv "$1.pdf" ./pdfs/
 }
 mdhall(){
   cat *.md | tee $1.md | mdhtml $1 && rm $1.md && mkdir -p htmls && mv "$1.html" ./htmls/
@@ -82,6 +82,8 @@ alias egrep='egrep --color=auto'
 alias la='ls -halF'
 
 alias play='DRI_PRIME=1 mplayer'
+alias mp='play *.mp4 -sub *.srt'
+alias r='ranger'
 alias pycharm='/home/partha/Programs/pycharm-community-2018.1.4/bin/pycharm.sh'
 alias blender='/home/partha/Programs/blender-2.79b-linux-glibc219-x86_64/blender'
 alias memo='python /home/partha/Programs/SimpleMemo/SimpleMemo.py'

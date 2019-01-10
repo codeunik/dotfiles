@@ -38,8 +38,8 @@ URxvt*saveLines: 12000
 URxvt*foreground: #657b83
 URxvt*background: #002b36
 
-URxvt*font: xft:Inconsolata:size=14
-URxvt*boldFont: xft:Inconsolata:bold:size=14
+URxvt*font: xft:Inconsolata:size=15
+URxvt*boldFont: xft:Inconsolata:bold:size=15
 URxvt*letterSpace: -1
 
 ! # scrollbar - true (default) or false
