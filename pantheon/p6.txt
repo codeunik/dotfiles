@@ -1,0 +1,1 @@
+pantheon-screenshot eidete-bzr pantheon-photos pantheon-camera-git elementary-scan-bzr switchboard pantheon-applications-menu wingpanel-indicator-datetime wingpanel-indicator-session wingpanel-indicator-ayatana 

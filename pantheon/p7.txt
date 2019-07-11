@@ -1,0 +1,1 @@
+indicator-session wingpanel-indicator-session-git xscreensaver-dbus-screenlock contractor file-roller gtk-theme-elementary

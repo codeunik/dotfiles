@@ -1,0 +1,1 @@
+pantheon-default-settings-git elementary-icon-theme  gtk-theme-elementary-git elementary-wallpapers-git gnome-settings-daemon-elementary

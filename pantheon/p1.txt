@@ -1,0 +1,1 @@
+pantheon-session-git cerbere-git gala-git wingpanel-git pantheon-applications-menu-git plank
